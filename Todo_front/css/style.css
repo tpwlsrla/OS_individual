@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(201, 216,245);
+}
+
+.container{
+    width: 50%;
+    margin: 20px auto; 
+    padding: 0px 20px 20px 20px;
+    background: #ddd;
+    box-shadow: 0 0 30px rgba(67,79,250,0.5);
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 10%;
+    padding: 10px;
+}
+
+.todo-input {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    }
+
+.todos-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.todo-item{
+    background-color: #f4f4f4;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    width: calc(33.33% - 7px); /* 없으면text size 만큼만width가늘어남*/
+    position: relative; /* 자식요소를absolute 로배치*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    word-wrap: break-word; /* 긴단어가있을때줄바꿈처리*/
+}
+
+.todo-item:hover{
+    background-color: #ddd;
+}
+
+.delete-btn{
+    display: none; /* 초기에는숨겨짐*/
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    background-color: #ff4d4d;
+    color: white; 
+    border: none; /* 테두리없애기*/
+    padding: 5px10px;
+    border-radius: 50%;
+    font-size: 10px;
+    cursor: pointer; /* 마우스커서를손가락모양으로변경*/
+}
+
+.todo-item:hover .delete-btn{
+    display:block;
+}
