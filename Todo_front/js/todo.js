@@ -1,4 +1,4 @@
-const host = "http://localhost:8000";
+const host = "http://44.223.216.144:8000";
 const todosContainer = document.querySelector('.todos-container');
 
 function getTodos() {
